@@ -16,6 +16,12 @@
     
     <dependencies>
         <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
@@ -95,5 +101,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

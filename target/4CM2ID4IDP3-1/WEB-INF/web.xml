@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <description>Location to store uploaded file</description>
+        <param-name>file-upload</param-name>
+        <param-value>
+           c:\background-images\
+        </param-value>
+    </context-param>
     <servlet>
         <servlet-name>Consultar</servlet-name>
         <servlet-class>Servlets_CRUD.Consultar</servlet-class>
@@ -23,6 +30,22 @@
     <servlet>
         <servlet-name>Login</servlet-name>
         <servlet-class>Session.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>SubidaArchivos.UploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FileUploader</servlet-name>
+        <servlet-class>SubidaArchivos.FileUploader</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MultiPartformData</servlet-name>
+        <servlet-class>SubidaArchivos.MultiPartformData</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarArchivos</servlet-name>
+        <servlet-class>SubidaArchivos.ConsultarArchivos</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Consultar</servlet-name>
@@ -48,6 +71,22 @@
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileUploader</servlet-name>
+        <url-pattern>/FileUploader</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MultiPartformData</servlet-name>
+        <url-pattern>/MultiPartformData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarArchivos</servlet-name>
+        <url-pattern>/ConsultarArchivos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -4,38 +4,26 @@ package Classes;
 public class Ejercicio {
     private int id;
     private String nombre;
-    private int ancho;
-    private int altura;
+    private int distanciaX;
+    private String fondo;    //URL
+    private String objetivo; //URL
     
-    public Ejercicio(int id, String nombre, int ancho, int altura) {
+    public Ejercicio(int id, String nombre, int distanciaX, String fondo, String objetivo) {
         this.id = id;
         this.nombre = nombre;
-        this.ancho = ancho;
-        this.altura = altura;
+        this.distanciaX = distanciaX;
+        this.fondo = fondo;
+        this.objetivo = objetivo;
     }
     
     public int getId () {
         return this.id;
-    }
-    
-    public int getAncho () {
-        return this.ancho;
-    }
-        
-    public int getAltura () {
-        return this.altura;
     }
 
     public void setId (int id) {
         this.id = id;
     }
     
-    public void setAncho (int ancho) {
-        this.ancho = ancho;
-    }
-        
-    public void setAltura (int altura) {
-        this.altura = altura;
-    }    
+
     
 }

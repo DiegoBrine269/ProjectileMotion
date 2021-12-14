@@ -23,17 +23,19 @@ CREATE TABLE Ejercicio
 (
 	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY ,
     nombre VARCHAR(50),
-	ancho INT NOT NULL,
-    altura INT NOT NULL
+	distanciaX INT NOT NULL,  /*Distancia a la que se encuentra el objetivo*/
+    fondo VARCHAR(100), 	  /*Ubicación de la imagen de fondo*/
+    objetivo VARCHAR(100) 	  /*Ubicación de la imagen que representa al objetivo*/
 );
 
 CREATE TABLE Usuario_Ejercicio
 (
 	idUsuario INT NOT NULL ,
 	idEjercicio INT NOT NULL,
-    puntos INT NOT NULL,
+    puntos INT NOT NULL, 		/*Inicialmente 10, por cada intento fallido reduce un punto*/
 	FOREIGN KEY (idEjercicio) REFERENCES DatosUsuario(id),
     FOREIGN KEY (idUsuario) REFERENCES DatosUsuario(id),
     PRIMARY KEY (idUsuario, idEjercicio)
 );
 
+SELECT Usuario.id, nombre, apPaterno, apMaterno FROM Usuario JOIN DatosUsuario ON Usuario.id = DatosUsuario.id WHERE DatosUsuario.nombre = 'Mabel' AND Usuario.pass = 1234; 

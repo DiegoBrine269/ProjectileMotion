@@ -1,6 +1,9 @@
 Servlets_CRUD\Actualizar.class
+SubidaArchivos\ConsultarArchivos.class
 Classes\Ejercicio.class
 Servlets_CRUD\Consultar.class
+SubidaArchivos\UploadServlet.class
+Classes\Usuario.class
 Servlets_CRUD\ConexionBD.class
 Servlets_CRUD\Insertar.class
 Servlets_CRUD\Eliminar.class

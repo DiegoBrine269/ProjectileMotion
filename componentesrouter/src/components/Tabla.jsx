@@ -4,19 +4,18 @@ import Ejercicio from './Ejercicio.jsx';
 export default class Tabla extends Component {
     
     llenarTabla = () => {
-        const usuarios = this.props.usuarios;
+        const ejercicios = this.props.ejercicios;
 
-      
-        
         return(
             <>
-                {usuarios.map(usuario => (
+                {ejercicios.map(ejercicio => (
                     <Ejercicio 
-                        key = {usuario.id}
-                        id = {usuario.id}
-                        nombre = {usuario.nombre}
-                        ancho = {usuario.ancho}
-                        altura = {usuario.altura}
+                        key = {ejercicio.id}
+                        id = {ejercicio.id}
+                        nombre = {ejercicio.nombre}
+                        distanciaX = {ejercicio.distanciaX}
+                        fondo = {ejercicio.fondo}
+                        objetivo = {ejercicio.objetivo}
                     />
                 ))}
 

@@ -61,9 +61,10 @@ public class Consultar extends HttpServlet
                 //Creo la instancia
                 String id = rs.getString("id");
                 String nombre = rs.getString("nombre");
-                String ancho = rs.getString("ancho");
-                String altura = rs.getString("altura");
-                Ejercicio ejercicio = new Ejercicio(Integer.parseInt(id), nombre, Integer.parseInt(ancho), Integer.parseInt(altura));
+                String distanciaX = rs.getString("distanciaX");
+                String fondo = rs.getString("fondo");
+                String objetivo = rs.getString("objetivo");
+                Ejercicio ejercicio = new Ejercicio(Integer.parseInt(id), nombre, Integer.parseInt(distanciaX), fondo, objetivo);
                 
                 ejercicios.add(ejercicio);                 
             }

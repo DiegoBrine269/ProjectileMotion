@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Tabla from '../components/Tabla.jsx';
-
+import Tabla from '../components/Tabla.jsx'; 
  
 class Home extends React.Component {
   
   state = {
-    usuarios: []
+    ejercicios: []
   };
 
   constructor(props) {
@@ -20,11 +19,10 @@ class Home extends React.Component {
 
     const url = `http://localhost:8080/ProjectileMotion/Consultar`
     fetch (url)
-        .then( response => response.json() )
-        .then( data => {
-          
-          this.setState({usuarios:data});            
-        })   
+    .then( response => response.json() )
+    .then( data => {
+      this.setState({ejercicios:data});            
+    })   
   }
 
   render() {
@@ -40,8 +38,9 @@ class Home extends React.Component {
           <h2>Altas, bajas, consultas y cambios de ejercicios</h2>
 
             <Link className="btn btn-success mt-3" id="btnAdd" to="/crear">Crear</Link>
+            <Link className="btn btn-success mt-3" to="/upload">Añadir fondos</Link> 
 
-          <Tabla usuarios = { this.state.usuarios } />
+          <Tabla ejercicios = { this.state.ejercicios } />
         </div>        
       </>
     );

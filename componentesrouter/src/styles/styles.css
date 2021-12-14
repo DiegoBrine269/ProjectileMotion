@@ -13,7 +13,7 @@ html {
 
 *{
     font-family: var(--fuenteTexto);  
-    font-size: 1.5rem;  
+    font-size: 1.7rem;  
 }
 
 h1, h2, h3{
@@ -47,6 +47,9 @@ h2{
     margin-top: 2rem;
 }
 
+.bold{
+    font-weight: bold;
+}
 /*Botones*/
 
 .btn{
@@ -55,7 +58,9 @@ h2{
     outline: none;
     border: none;
     color: white;
+    margin: 0 1rem;
 }
+
 
 .btn-success{
     background-color: var(--verde);
@@ -63,6 +68,12 @@ h2{
 
 .btn:hover{
     cursor: pointer;
+}
+
+button[disabled=disabled], button:disabled{
+    background-color: #929292;
+    cursor: not-allowed;
+    pointer-events: all !important;
 }
 
 /*Tabla*/
@@ -158,7 +169,7 @@ td.acciones {
 .formulario, .tabla-datos-usuario {
     margin: 0 auto;
     width: 60%;
-    margin-top: 30rem;
+    margin-top: 5rem;
 }
 
 .formulario.login {
@@ -167,9 +178,14 @@ td.acciones {
     border-radius: 5px;
 }
 
+.formulario.controles {
+    margin-top: 5rem;
+    margin-left: 0;
+}
+
 /*Formulario de nuevo usuario*/
 
-form .campo{
+form .campo, .formulario .campo, .campo{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -187,9 +203,15 @@ form button{
     margin: 0 auto;
 }
 
+.layout{
+    display: grid;
+    grid-template-columns: 3% 97%;
+}
+
 canvas{
-    width: 100%;
-    background-image: url('../img/background.jpg');
+    width: 85%;
+    height: 35vw;
+    /*min-height: 50rem;*/
     background-position: center;
     background-size: cover;
 }

@@ -2,15 +2,13 @@ import React, { Component } from 'react'
 import {useLocation} from 'react-router-dom'
 
 function Actualizar () {
-    
-    const location = useLocation()
-
-    let { id, nombre, ancho, altura } = location.aboutProps;
+    const location = useLocation();
+    const { id, nombre, distanciaX, fondo, objetivo } = location.aboutProps;
     
     state = {
         campoUno: nombre,
-        campoDos: ancho,
-        campoTres: altura
+        campoDos: distanciaX,
+        campoTres: fondo
         
       };
 
@@ -43,12 +41,16 @@ function Actualizar () {
                 <input type="text" name="nombre" value={nombre} onChange={actualizarCampoUno}/>
             </div>
             <div className="campo">
-                <label>Ancho</label>
-                <input type="text" name="ancho" value={ancho} onChange={actualizarCampoDos}/>
+                <label>Distancia del objetivo</label>
+                <input type="text" name="distanciaX" value={distanciaX} onChange={actualizarCampoDos}/>
             </div>
             <div className="campo">
-                <label>Altura</label>
-                <input type="text" name="altura" value={altura} onChange={actualizarCampoTres}/>
+                <label>Fondo del escenario</label>
+                <input type="text" name="fondo" value={fondo} onChange={actualizarCampoTres}/>
+            </div>
+            <div className="campo">
+                <label>Imagen del objetivo</label>
+                <input type="text" name="objetivo" value={objetivo} onChange={actualizarCampoTres}/>
             </div>
             <button className="btn btn-success" type="submit">Actualizar</button>
         </form>

@@ -7,6 +7,7 @@ import Crear from './pages/Crear.jsx';
 import Actualizar from './pages/Actualizar.jsx';
 import Login from './pages/Login.jsx';
 import Laboratorio from './pages/Laboratorio.jsx';
+import Upload from './pages/Upload.jsx';
  
 class Aplicacion extends React.Component {
 
@@ -51,6 +52,10 @@ class Aplicacion extends React.Component {
             
             <Route exact path="/actualizar">
               {loggedIn ?  <Actualizar /> : <Redirect to="/login" />}
+            </Route>
+
+            <Route exact path="/upload">
+              {loggedIn ?  <Upload /> : <Redirect to="/login" /> }
             </Route>
 
             <Route exact path="/laboratorio">
